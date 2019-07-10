@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import PerfectScrollbar from 'perfect-scrollbar';
 import {
   FaDiscord,
+  FaSpotify,
   FaHome,
   FaBook,
   FaBarcode,
@@ -65,6 +66,11 @@ class Sidebar extends React.Component {
             <li>
               <a href="/discord">
                 <FaDiscord /> Discord
+              </a>
+            </li>
+            <li>
+              <a href="/spotify">
+                <FaSpotify /> Spotify
               </a>
             </li>
             <li>
