@@ -6,7 +6,6 @@
   "license": "UNLICENSED",
   "author": "Kyle Salter <kyle@kylesalter.com> (https://kylesalter.com)",
   "scripts": {
-    "prebuild": "yarn typecheck",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx --format=pretty",
