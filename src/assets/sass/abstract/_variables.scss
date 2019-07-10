@@ -1,0 +1,223 @@
+// gradient
+$default-states: #263148 !default;
+$primary-states: #ba54f5 !default;
+$success-states: #0098f0 !default;
+$info-states: #3358f4 !default;
+$warning-states: #ff6491 !default;
+$danger-states: #ec250d !default;
+$black-states: #1d253b !default;
+
+$opacity-gray-3: rgba(222, 222, 222, 0.3) !default;
+$opacity-gray-5: rgba(222, 222, 222, 0.5) !default;
+$opacity-gray-8: rgba(222, 222, 222, 0.8) !default;
+
+$opacity-5: rgba(255, 255, 255, 0.5) !default;
+$opacity-6: rgba(255, 255, 255, 0.6) !default;
+$opacity-8: rgba(255, 255, 255, 0.8) !default;
+
+$opacity-1: rgba(255, 255, 255, 0.1) !default;
+$opacity-2: rgba(255, 255, 255, 0.2) !default;
+
+$easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// Spacing
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+    'sm': (
+      $spacer * 2,
+    ),
+    'md': (
+      $spacer * 4,
+    ),
+    'lg': (
+      $spacer * 6,
+    ),
+    'xl': (
+      $spacer * 8,
+    ),
+  ),
+  $spacers
+);
+
+$padding-base-vertical: 0.5rem !default;
+$padding-base-horizontal: 0.7rem !default;
+
+$padding-btn-vertical: 11px !default;
+$padding-btn-horizontal: 40px !default;
+
+$padding-round-horizontal: 23px !default;
+
+$padding-lg-vertical: 15px !default;
+
+$padding-input-vertical: 11px !default;
+$padding-input-horizontal: 19px !default;
+
+$margin-lg-vertical: 30px !default;
+$margin-base-vertical: 15px !default;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+  ),
+  $sizes
+);
+
+// Components
+
+$shape-height-xl: 1.5 !default;
+$shape-height-lg: 1.5 !default;
+$shape-height-sm: 1.5 !default;
+
+// border
+$none: 0 !default;
+$border-thin: 1px !default;
+$border-thick: 2px !default;
+$border-width: 0.0625rem !default;
+
+$border-radius: 0.25rem !default;
+$border-radius-xl: 0.875rem !default;
+$border-radius-lg: 0.4285rem !default;
+$border-radius-sm: 0.2857rem !default;
+$border-radius-xs: 0.1428rem !default;
+
+$margin-bottom: 10px !default;
+$border: 1px solid !default;
+
+$box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+
+$dropdown-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.125);
+$box-shadow-raised: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+$box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
+
+$caret-width: 0.3em !default;
+
+$transition-base: all 0.15s ease !default;
+$transition-fade: opacity 0.15s linear !default;
+$transition-collapse: height 0.35s ease !default;
+
+$fast-transition-time: 150ms !default;
+
+$transition-linear: linear !default;
+$transition-bezier: cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-ease: ease 0s;
+
+$select-coordinates: 50% -40px !default;
+$general-transition-time: 300ms !default;
+// Fonts
+
+$font-family-base: 'Poppins', sans-serif !default;
+$font-family-alt: 'Poppins', sans-serif !default;
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !default;
+
+$font-size-dash: 0.875rem !default;
+
+$font-size-base: $font-size-dash !default; // Assumes the browser default, typically `16px`
+$font-size-xl: ($font-size-base * 1.428);
+$font-size-lg: ($font-size-base * 1.142);
+$font-size-sm: ($font-size-base * 0.85714286);
+$font-size-xs: ($font-size-base * 0.714);
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
+$font-weight-extra-bold: 700 !default;
+
+$font-paragraph: 1rem !default;
+
+$font-weight-base: $font-weight-normal !default;
+$shape-height-base: 1.428571 !default;
+
+$headings-margin-bottom: ($spacer / 2);
+$headings-font-family: inherit !default;
+$headings-font-weight: $font-weight-normal !default;
+$headings-line-height: 1.2 !default;
+
+$heading-letter-spacing: 0.025em !default;
+$heading-font-size: 0.95rem !default;
+$heading-text-transform: uppercase !default;
+$heading-font-weight: $headings-font-weight !default;
+
+$heading-title-letter-spacing: 0.025em !default;
+$heading-title-font-size: 1.375rem !default;
+$heading-title-font-weight: $font-weight-bold !default;
+$heading-title-text-transform: uppercase !default;
+
+$heading-section-letter-spacing: 0.025em !default;
+$heading-section-font-size: 1.375rem !default;
+$heading-section-font-weight: $font-weight-bold !default;
+$heading-section-text-transform: uppercase !default;
+
+$display1-size: 3.3rem !default;
+$display2-size: 2.75rem !default;
+$display3-size: 2.1875rem !default;
+$display4-size: 1.6275rem !default;
+
+$display1-weight: $font-weight-bold !default;
+$display2-weight: $font-weight-bold !default;
+$display3-weight: $font-weight-bold !default;
+$display4-weight: $font-weight-bold !default;
+$display-line-height: $headings-line-height !default;
+
+$paragraph-font-size: 0.625rem !default;
+$paragraph-font-weight: 300 !default;
+$paragraph-line-height: 1.7 !default;
+
+$lead-font-size: ($paragraph-font-size * 1.25);
+$lead-font-weight: 300 !default;
+
+$small-font-size: 80% !default;
+
+$blockquote-font-size: ($font-size-base * 1.1);
+
+$hr-border-width: $border-width !default;
+
+$mark-padding: 0.2em !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+$list-inline-padding: 0.5rem !default;
+
+$mark-bg: #fcf8e3 !default;
+
+$hr-margin-y: $spacer * 2 !default;

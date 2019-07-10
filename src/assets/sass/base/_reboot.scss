@@ -1,0 +1,68 @@
+// $brand-theme: () !default;
+// $brand-theme: map-merge(
+//   (
+//     'primary': $brand-primary,
+//     'info': $brand-info,
+//     'success': $brand-success,
+//     'warning': $brand-warning,
+//     'danger': $brand-danger,
+//     'inverse': $brand-inverse,
+//   ),
+//   $brand-theme
+// );
+
+// $action-colors: () !default;
+// $action-colors: map-merge(
+//   (
+//     'star-rating': $star-rating-color,
+//     'star-rating-active': $star-rating-color-active,
+//     'favorite': $favorite-color,
+//     'like': $like-color,
+//     'love': $love-color,
+//   ),
+//   $action-colors
+// );
+
+// .app-container {
+//   @include themer() {
+//     background-color: theme-var(body-bg);
+//     h2 {
+//       color: themed-var(white);
+//       font-weight: 100;
+//     }
+//   }
+// }
+
+body {
+  margin: 0; // 1
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $shape-height-base;
+  @include themer() {
+    background-color: theme-get(body-bg);
+    color: theme-get(white);
+  }
+}
+
+.main-panel > .container {
+  padding: 80px 30px 30px 280px;
+  width: 100%;
+  max-width: 100% !important;
+    min-height: calc(100vh - 70px);
+}
+
+@include media-breakpoint-down(sm) {
+  .main-panel > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: 24px;
+}
+
+.sidebar {
+  background-color: theme-get(primary);
+}

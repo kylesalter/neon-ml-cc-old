@@ -1,0 +1,3 @@
+[build]
+  command = "npm i -gs yarn && yarn build"
+  publish = "public"

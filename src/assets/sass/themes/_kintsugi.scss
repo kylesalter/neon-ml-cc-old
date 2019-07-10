@@ -1,0 +1,82 @@
+$dark-mode-black: #2f333d;
+$light-mode-black: #fafafa;
+
+@mixin dark() {
+  $blue: #61afef !global;
+  $purple: #c678dd !global;
+  $pink: #e06c75 !global;
+  $red: #be5046 !global;
+  $orange: #d19a66 !global;
+  $yellow: #e5c07b !global;
+  $green: #98c379 !global;
+  $cyan: #56b6c2 !global;
+
+  $white: #fff !global;
+  $black: $dark-mode-black;
+  $gray-100: #abb2bf !global;
+  $gray-200: #828997 !global;
+  $gray-300: #636d83 !global;
+  $gray-400: #5c6370 !global;
+  $gray-500: #4b5263 !global;
+  $gray-600: #3e4452 !global;
+  $gray-700: #3b4048 !global;
+  $gray-800: #373e4b !global;
+  $gray-900: #181a1f !global;
+
+  $background-black: $dark-mode-black !global;
+  $body-bg: $background-black !global;
+
+  $default: $background-black !global;
+  $primary: $purple !global;
+  $secondary: $blue !global;
+  $success: $green !global;
+  $info: #528bff !global;
+  $warning: $yellow !global;
+  $danger: $red !global;
+
+  $dark: $gray-900 !global;
+
+  @include define-theme(kintsugi-dark);
+}
+
+@mixin light {
+  $cyan: #0184bc !global;
+  $blue: #4078f2 !global;
+  $purple: #a626a4 !global;
+  $green: #50a14f !global;
+  $pink: #e45649 !global;
+  $red: #ca1243 !global;
+  $orange: #986801 !global;
+  $yellow: #c18401 !global;
+
+  $gray-100: #f0f0f0 !global;
+  $gray-200: #e7e9e1 !global;
+  $gray-300: #dfdfdf !global;
+  $gray-400: #d3d3d3 !global;
+  $gray-500: #d0d0d0 !global;
+  $gray-600: #c2c2c3 !global;
+  $gray-700: #9e9e9e !global;
+  $gray-800: #696c77 !global;
+  $gray-900: #494b53 !global;
+
+  $background-black: $light-mode-black !global;
+  $background-states-black: darken($dark-mode-black, 15%) !global;
+  $white: $background-states-black !global;
+  $body-bg: $background-black !global;
+  $background-black: $light-mode-black !global;
+
+  $default: $background-black !global;
+  $primary: $purple !global;
+  $secondary: $blue !global;
+  $success: $green !global;
+  $info: #526fff !global;
+  $warning: $yellow !global;
+  $danger: $red !global;
+
+  $dark: $gray-900 !global;
+
+  @include define-theme(kintsugi-light);
+}
+
+@include dark();
+@include light();

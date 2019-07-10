@@ -1,0 +1,94 @@
+@function theme-source-get($key) {
+  $value: map-get($theme-source, $key);
+  @return $value;
+}
+
+@function grays() {
+  @return (
+    gray-100: theme-source-get(gray-100),
+    gray-200: theme-source-get(gray-200),
+    gray-300: theme-source-get(gray-300),
+    gray-400: theme-source-get(gray-400),
+    gray-500: theme-source-get(gray-500),
+    gray-600: theme-source-get(gray-600),
+    gray-700: theme-source-get(gray-700),
+    gray-800: theme-source-get(gray-800),
+    gray-900: theme-source-get(gray-900)
+  );
+}
+
+@function colors() {
+  @return (
+    blue: theme-source-get(blue),
+    indigo: theme-source-get(indigo),
+    purple: theme-source-get(purple),
+    pink: theme-source-get(pink),
+    red: theme-source-get(red),
+    orange: theme-source-get(orange),
+    yellow: theme-source-get(yellow),
+    green: theme-source-get(green),
+    teal: theme-source-get(teal),
+    cyan: theme-source-get(cyan),
+    white: theme-source-get(white),
+    gray: theme-source-get(gray-600),
+    light: theme-source-get(gray-400),
+    lighter: theme-source-get(gray-200),
+    gray-dark: theme-source-get(gray-800),
+    opacity-8: rgba(theme-source-get(white), 0.8)
+  );
+}
+
+@function theme-colors() {
+  @return (
+    'default': theme-source-get(default),
+    'primary': theme-source-get(primary),
+    'secondary': theme-source-get(secondary),
+    'success': theme-source-get(success),
+    'info': theme-source-get(info),
+    'warning': theme-source-get(warning),
+    'danger': theme-source-get(danger),
+    'white': theme-source-get(white),
+    'neutral': theme-source-get(white),
+    'dark': theme-source-get(dark),
+    'darker': theme-source-get(darker),
+  );
+}
+
+@function typography() {
+  @return (
+    headings-color: theme-source-get(gray-800),
+    text-muted: theme-source-get(gray-600),
+    blockquote-small-color: theme-source-get(gray-600),
+    // hr-border-color: rgba($black, 0.1),
+    border-color: theme-source-get(gray-200),
+    component-hover-color: theme-source-get(gray-300),
+    component-hover-bg: theme-source-get(gray-300),
+    component-hover-border-color: theme-source-get(gray-300),
+    // box-shadow-sm: 0 0.125rem 0.25rem rgba(theme-source-get(black), 0.075),
+    // box-shadow-lg: 0 1rem 3rem rgba(black, 0.175),
+    // component-active-color: theme-source-get(white),
+    component-active-bg: theme-source-get(primary),
+    component-active-border-color: theme-source-get(primary)
+  );
+}
+
+@function section-colors() {
+  @return (
+    'primary': theme-source-get(body-bg),
+    'secondary': theme-source-get($secondary),
+    'light': theme-source-get($gray-400),
+    'dark': theme-source-get($dark),
+    'darker': theme-source-get($darker),
+  );
+}
+
+@function build-vars($map) {
+  $theme-source: $map !global;
+  $vars: (
+    grays: grays(),
+    colors: colors(),
+    typography: typography(),
+  );
+  $theme-source: null !global;
+  @return $vars;
+}

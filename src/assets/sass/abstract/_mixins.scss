@@ -1,0 +1,16 @@
+@mixin break-accessibility {
+  @content;
+}
+
+@mixin child-attribute($child) {
+  $string: inspect(&);
+  $original: str-slice($string, 3, -4);
+  @at-root #{ selector-replace(&, &, "[#{$original}#{$child}]" ) } {
+    @content;
+  }
+}
+
+@mixin rgba-background($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity);
+}

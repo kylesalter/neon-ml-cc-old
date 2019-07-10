@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": ["es2015", "dom"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "composite": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@api": ["src/api/index"],
+      "@api/*": ["src/api/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@config": ["src/config/index"],
+      "@config/*": ["src/config/*"],
+      "@images/*": ["./src/images/*"],
+      "@pages/*": ["src/pages/*"],
+      "@redux": ["src/redux/index"],
+      "@redux/*": ["src/redux/*"],
+      "@sagas": ["src/sagas/index"],
+      "@sagas/*": ["src/sagas/*"],
+      "@state": ["src/state/index"],
+      "@state/*": ["src/state/*"]
+    },
+    "noEmit": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

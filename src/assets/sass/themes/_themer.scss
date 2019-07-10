@@ -1,0 +1,54 @@
+$themes: () !global;
+
+@mixin define-theme($name) {
+  $new-theme-map: theme-schema();
+  $vars: build-vars($new-theme-map);
+  $new-theme-map: map-merge($new-theme-map, $vars);
+  $themes: map-merge(
+    $themes,
+    (
+      $name: $new-theme-map,
+    )
+  ) !global;
+}
+
+@function build-theme($name) {
+  $base-map: map-get($themes, $name);
+  $new-map: ();
+  @each $key, $map in $base-map {
+    $value: map-get($base-map, $key);
+    $new-map: map-merge(
+      $new-map,
+      (
+        $key: $value,
+      )
+    );
+  }
+  @return $new-map;
+}
+
+@mixin cleanup-theme() {
+  $theme-map: null !global;
+}
+
+@mixin themer($overrides: ()) {
+  @each $name, $map in $themes {
+    [theme='#{$name}'] #{if(&, "&", "*")} {
+      $theme-map: build-theme($name) !global;
+      $theme-map: map-merge($theme-map, $overrides) !global;
+      @content;
+    }
+  }
+}
+
+@function theme-get($key) {
+  @return map-get($theme-map, $key);
+}
+
+@function get-theme-var($map, $key) {
+  @return map-get($map, $key);
+}
+
+@function theme-get-in($keys...) {
+  @return map-get-in($theme-map, $keys...);
+}
