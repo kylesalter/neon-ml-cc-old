@@ -9,8 +9,11 @@ import {
   FaSpotify,
   FaHome,
   FaBook,
+  FaBookDead,
+  FaDragon,
   FaBarcode,
   FaShoppingCart,
+  FaSwords,
 } from 'react-icons/fa';
 import classNames from 'classnames';
 
@@ -69,8 +72,13 @@ class Sidebar extends React.Component {
               </a>
             </li>
             <li>
-              <a href="/spotify">
-                <FaSpotify /> Spotify
+              <a href="/bossing">
+                <FaDragon /> Bossing
+              </a>
+            </li>
+            <li>
+              <a href="/monster-cards">
+                <FaBookDead /> Monster Cards
               </a>
             </li>
             <li>
@@ -81,11 +89,6 @@ class Sidebar extends React.Component {
             <li>
               <a href="/price-check-guide">
                 <FaBarcode /> Price Check Guide
-              </a>
-            </li>
-            <li>
-              <a href="/lending-ledger">
-                <FaBook /> Lending Ledger
               </a>
             </li>
           </Nav>
