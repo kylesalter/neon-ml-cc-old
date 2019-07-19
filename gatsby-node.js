@@ -113,3 +113,39 @@ exports.onCreateWebpackConfig = props => {
 
   addAliases(props);
 };
+
+const redirects = [
+  { from: '/discord', to: 'https://discord.gg/XafZ3ZM' },
+  {
+    from: '/market',
+    to:
+      'https://docs.google.com/spreadsheets/d/1U5a7bMPuVRVEDjxOQML_Oq_q1GBsDQXWFBu01kD6zpghttps://discord.gg/XafZ3ZM',
+  },
+  {
+    from: '/price-check-guide',
+    to:
+      'https://docs.google.com/spreadsheets/d/13arzuRizakKuCCyFsuSD9w4F48v8Yj48ZTL_fPrsuTI',
+  },
+  {
+    from: '/bossing',
+    to:
+      'https://docs.google.com/spreadsheets/d/1o0jZaUZ1QbYLfZgieKGPqwG05KkZjSAVGsn7jeKBORw/edit?usp=sharing',
+  },
+  {
+    from: '/monster-cards',
+    to:
+      'https://docs.google.com/spreadsheets/d/1gw_j5srMS2Zl0c1iFNYLjN--2IzI75UihsZlv5orPGs/edit?usp=sharing',
+  },
+];
+
+exports.createPages = ({ actions }) => {
+  const { createRedirect } = actions;
+  redirects.forEach(({ from, to }) => {
+    createRedirect({
+      fromPath: from,
+      toPath: to,
+      statusCode: '301',
+      force: true,
+    });
+  });
+};

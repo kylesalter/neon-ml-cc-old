@@ -11,3 +11,4 @@ export const wrapRootElement = ({ element }) => {
   const { store } = createStore();
   return <Provider store={store}>{element}</Provider>;
 };
+
